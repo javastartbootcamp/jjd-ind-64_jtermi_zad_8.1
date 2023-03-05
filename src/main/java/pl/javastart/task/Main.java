@@ -11,11 +11,11 @@ public class Main {
         universityApp.createGroup("po-2022", "Programowanie Obiektowe", 1);
         universityApp.addStudentToGroup(179128, "pp-2022", "Marcin", "Abacki");
         universityApp.addStudentToGroup(179129, "pp-2022", "Adam", "Browarski");
-        universityApp.printAllStudents();
+        //universityApp.printAllStudents();
 
         universityApp.addGrade(179128, "pp-2022", 5);
         universityApp.addGrade(179129, "pp-2022", 5);
-        universityApp.addGrade(179128, "po-2022", 5.5);
+        universityApp.addGrade(179128, "pp-2022", 5.5);
 
         universityApp.printGroupInfo("pp-2022");
         universityApp.printGradesForStudent(179128);
