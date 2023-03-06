@@ -4,29 +4,16 @@ public class Group {
 
     private String groupId;
     private String groupName;
-    private int lecturerId;
-    private int[] studentIndex;
+    private Lecturer lecturer;
+    private Student[] students = new Student[1000];
     private int indexCounter;
 
-    public Group(String groupId, String groupName, int lecturerId) {
-        this.groupId = groupId;
-        this.groupName = groupName;
-        this.lecturerId = lecturerId;
-        this.studentIndex = new int[1000];
-        this.indexCounter = 0;
-    }
-
     public int getIndexCounter() {
-        return this.indexCounter;
+        return indexCounter;
     }
 
-    public int getStudentsIndex(int index) {
-        return this.studentIndex[index];
-    }
-
-    public void addStudentIndex(int index) {
-        this.studentIndex[indexCounter] = index;
-        indexCounter++;
+    public Student getStudent(int indexCounter) {
+        return students[indexCounter];
     }
 
     public String getGroupId() {
@@ -37,19 +24,31 @@ public class Group {
         return groupName;
     }
 
-    public int getLecturerId() {
-        return lecturerId;
+    public Lecturer getLecturer() {
+        return lecturer;
     }
 
-    public boolean isBelongsToGroup(int index) {
+    public Group(String groupId, String groupName, Lecturer lecturer) {
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.lecturer = lecturer;
+        this.indexCounter = 0;
+    }
+
+    public boolean studentBelongsToGroup(Student student) {
         int i = 0;
         boolean belongsToGroup = false;
         while (i < indexCounter && !belongsToGroup) {
-            if (studentIndex[i] == index) {
+            if (students[i] == student) {
                 belongsToGroup = true;
             }
             i++;
         }
         return belongsToGroup;
+    }
+
+    public void addStudentToGroup(Student student) {
+        students[indexCounter] = student;
+        indexCounter++;
     }
 }

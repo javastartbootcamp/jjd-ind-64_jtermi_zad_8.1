@@ -2,31 +2,25 @@ package pl.javastart.task;
 
 public class Grade {
 
-    private int studentIndex;
-    private String groupId;
+    private Student student;
+    private Group group;
     private double grade;
 
-    public int getStudentIndex() {
-        return studentIndex;
+    public Grade(Student student, Group group, double grade) {
+        this.student = student;
+        this.group = group;
+        this.grade = grade;
     }
 
-    public void setStudentIndex(int studentIndex) {
-        this.studentIndex = studentIndex;
+    public Student getStudent() {
+        return student;
     }
 
-    public String getGroupId() {
-        return groupId;
-    }
-
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
+    public Group getGroup() {
+        return group;
     }
 
     public double getGrade() {
         return grade;
-    }
-
-    public void setGrade(double grade) {
-        this.grade = grade;
     }
 }

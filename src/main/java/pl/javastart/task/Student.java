@@ -11,5 +11,4 @@ public class Student extends Person {
     public int getIndex() {
         return index;
     }
-
 }
