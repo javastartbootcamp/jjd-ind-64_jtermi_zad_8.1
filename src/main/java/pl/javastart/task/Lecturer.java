@@ -20,4 +20,5 @@ public class Lecturer extends Person {
                 + this.getFirstName() + " "
                 + this.getLastName());
     }
+
 }

@@ -23,4 +23,5 @@ public class Grade {
     public double getGrade() {
         return grade;
     }
+
 }

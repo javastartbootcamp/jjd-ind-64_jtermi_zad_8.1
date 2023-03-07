@@ -33,4 +33,5 @@ public class Main {
         System.out.println("Wydruk ocen dla studenta");
         universityApp.printGradesForStudent(179128);
     }
+
 }
