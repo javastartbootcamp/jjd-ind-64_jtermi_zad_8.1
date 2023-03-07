@@ -11,4 +11,10 @@ public class Student extends Person {
     public int getIndex() {
         return index;
     }
+
+    public void printStudentInfo() {
+        System.out.print(this.index + " "
+                + this.getFirstName() + " "
+                + this.getLastName() + ": ");
+    }
 }

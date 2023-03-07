@@ -15,7 +15,9 @@ public class Lecturer extends Person {
         return id;
     }
 
-    public String getDegree() {
-        return degree;
+    public void printLecturerInfo() {
+        System.out.println(this.degree + " "
+                + this.getFirstName() + " "
+                + this.getLastName());
     }
 }

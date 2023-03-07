@@ -6,7 +6,7 @@ public class Grade {
     private Group group;
     private double grade;
 
-    public Grade(Student student, Group group, double grade) {
+    public  Grade(Student student, Group group, double grade) {
         this.student = student;
         this.group = group;
         this.grade = grade;
